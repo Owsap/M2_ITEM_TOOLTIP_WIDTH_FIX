@@ -60,3 +60,16 @@
 				self.toolTipWidth += max(affectTextLineLenList) + 10
 
 		self.AlignTextLineHorizonalCenter()
+
+''' 6. '''
+# Search @ class ItemToolTip
+	def AutoAppendTextLine(self, text, color = FONT_COLOR, centerAlign = True):
+
+# Add above
+	def AlignTextLineHorizonalCenter(self):
+		for child in self.childrenList:
+			if type(child).__name__ == "TextLine":
+				(x, y) = child.GetLocalPosition()
+				child.SetPosition(self.toolTipWidth / 2, y)
+
+		self.ResizeToolTip()
