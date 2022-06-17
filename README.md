@@ -1,0 +1,2 @@
+# M2_ITEM_TOOLTIP_WIDTH_FIX
+Item ToolTip Width Fix
