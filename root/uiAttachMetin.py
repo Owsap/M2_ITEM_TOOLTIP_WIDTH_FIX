@@ -23,7 +23,7 @@
 			if self.CanAttachMetin(slotData, metinSubType):
 				metinSlot[i] = metinIndex
 				break
-		self.oldToolTip.AddItemData(itemIndex, metinSlot)
+		self.newToolTip.AddItemData(itemIndex, metinSlot)
 
 ''' 3. '''
 # Search @ class ItemToolTip @ def Open
@@ -32,9 +32,9 @@
 		metinSubType = item.GetItemSubType()
 
 		metinSlot = []
-		for i in xrange(playerm2g2.METIN_SOCKET_MAX_NUM):
-			metinSlot.append(playerm2g2.GetItemMetinSocket(targetItemPos, i))
-		for i in xrange(playerm2g2.METIN_SOCKET_MAX_NUM):
+		for i in xrange(player.METIN_SOCKET_MAX_NUM):
+			metinSlot.append(player.GetItemMetinSocket(targetItemPos, i))
+		for i in xrange(player.METIN_SOCKET_MAX_NUM):
 			slotData = metinSlot[i]
 			if self.CanAttachMetin(slotData, metinSubType):
 				metinSlot[i] = metinIndex

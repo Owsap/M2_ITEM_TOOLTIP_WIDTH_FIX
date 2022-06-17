@@ -24,7 +24,8 @@
 		if 50026 == itemVnum:
 
 # Add above
-		self.__CalculateToolTipWidth()
+		if not item.GetItemDescription():
+			self.__CalculateToolTipWidth()
 
 ''' 5. '''
 # Search
@@ -35,13 +36,6 @@
 		self.toolTipWidth = width
 
 	def __CalculateToolTipWidth(self):
-		if self.itemVnum == 0:
-			return
-
-		item.SelectItem(self.itemVnum)
-		if item.GetItemDescription():
-			return
-
 		affectTextLineLenList = []
 
 		metinSocket = self.metinSlot
@@ -54,6 +48,10 @@
 					affectString = self.__GetAffectString(affectType, affectValue)
 					if affectString:
 						affectTextLineLenList.append(len(affectString))
+
+			if self.itemVnum:
+				item.SelectItem(self.itemVnum)
+			self.metinSlot = None
 
 		if self.toolTipWidth == self.TOOL_TIP_WIDTH:
 			if affectTextLineLenList:
