@@ -56,3 +56,10 @@
 
 # Replace with
 		newWidth = 15 + self.oldToolTip.GetWidth() + 45 + self.newToolTip.GetWidth() + 15
+
+''' 5. '''
+# Search @ class ItemToolTip @ def UpdateDialog
+		newHeight = self.newToolTip.GetHeight() + 98
+
+# Add below
+		self.newToolTip.SetPosition(15 + self.oldToolTip.GetWidth() + 45, 38)
