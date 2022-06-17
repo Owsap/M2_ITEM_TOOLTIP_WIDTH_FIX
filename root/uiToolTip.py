@@ -55,7 +55,7 @@
 
 		if self.toolTipWidth == self.TOOL_TIP_WIDTH:
 			if affectTextLineLenList:
-				self.toolTipWidth += max(affectTextLineLenList) + 10
+				self.toolTipWidth += max(affectTextLineLenList) + 25
 
 		self.AlignTextLineHorizonalCenter()
 
